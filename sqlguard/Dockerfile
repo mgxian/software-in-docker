@@ -1,4 +1,4 @@
-FROM centos7:base
+FROM registry.cn-shanghai.aliyuncs.com/mgxian/centos7:base
 MAINTAINER will<will835559313@163.com>
 
 
