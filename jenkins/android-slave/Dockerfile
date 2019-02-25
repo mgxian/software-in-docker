@@ -4,7 +4,7 @@ USER root
 RUN dpkg --add-architecture i386 \
     && apt-get update \
     && apt-get install -y sudo git openssh-server rsync unzip \
-    && apt-get install -y lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6 \
+    && apt-get install -y lib32z1 lib32ncurses5 lib32bz2-1.0:i386 lib32stdc++6 \
     && rm -rf /var/lib/apt/lists/* \
     && rm -f /var/cache/apt/*.bin
 
