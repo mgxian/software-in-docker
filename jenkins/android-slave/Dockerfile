@@ -18,7 +18,8 @@ RUN sed -i 's|session    required     pam_loginuid.so|session    optional     pa
     && dpkg-reconfigure openssh-server
 
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip \
-    && unzip sdk-tools-linux-3859396.zip \
+    && unzip sdk-tools-linux-4333796.zip \
+    && rm -f sdk-tools-linux-4333796.zip \
     && mkdir /usr/local/android-sdk \
     && mv tools /usr/local/android-sdk \
     && cd /usr/local/android-sdk/tools \
