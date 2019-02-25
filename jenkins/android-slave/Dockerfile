@@ -22,9 +22,7 @@ RUN wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     && rm -f sdk-tools-linux-4333796.zip \
     && mkdir /usr/local/android-sdk \
     && mv tools /usr/local/android-sdk \
-    && cd /usr/local/android-sdk/tools \
-    && ./android update sdk \
-    && cd bin \
+    && cd /usr/local/android-sdk/tools/bin \
     && ./sdkmanager --update \
     && ./sdkmanager "platforms;android-26" \
     && ./sdkmanager --list
