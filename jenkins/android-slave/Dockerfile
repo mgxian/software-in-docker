@@ -24,7 +24,10 @@ RUN wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     && mv tools /usr/local/android-sdk \
     && cd /usr/local/android-sdk/tools/bin \
     && ./sdkmanager --update \
-    && ./sdkmanager "platforms;android-26" \
+    && ./sdkmanager tools "build-tools;28.0.3" "platforms;android-28" \
+    && ./sdkmanager "extras;android;m2repository" "extras;google;m2repository" \
+    && ./sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
+    && ./sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2" \
     && ./sdkmanager --list
 
 EXPOSE 22
