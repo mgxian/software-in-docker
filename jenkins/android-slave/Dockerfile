@@ -28,7 +28,9 @@ RUN wget -q https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
     && ./sdkmanager "extras;android;m2repository" "extras;google;m2repository" \
     && ./sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2" \
     && ./sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2" \
+    && yes | ./sdkmanager --licenses \
     && ./sdkmanager --list
 
+ENV ANDROID_HOME /usr/local/android-sdk
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
